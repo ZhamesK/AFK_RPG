@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
         ShopBtn.onClick.AddListener(OpenShopMenu);
         QuitBtn.onClick.AddListener(QuitShopMenu);
         
-        // ¾ÆÀÌÅÛ ±¸¸Å ¹öÆ°¿¡ ±¸¸Å ÀÌº¥Æ® Ãß°¡
+        // ì•„ì´í…œ êµ¬ë§¤ ë²„íŠ¼ì— êµ¬ë§¤ ì´ë²¤íŠ¸ ì¶”ê°€
         PurchaseBtns = GetComponentsInChildren<Button>();
         for (int i = 0; i < PurchaseBtns.Length; i++)
         {
@@ -34,19 +34,19 @@ public class Shop : MonoBehaviour
         
     }
 
-    // »óÁ¡ ¸Ş´º ¿­±â
+    // ìƒì  ë©”ë‰´ ì—´ê¸°
     void OpenShopMenu()
     {
         ShopMenu.SetActive(true);
     }
 
-    // »óÁ¡ ¸Ş´º ´İ±â
+    // ìƒì  ë©”ë‰´ ë‹«ê¸°
     void QuitShopMenu()
     {
         ShopMenu?.SetActive(false);
     }
 
-    // ¾ÆÀÌÅÛ ±¸¸Å
+    // ì•„ì´í…œ êµ¬ë§¤
     void Purchase()
     {
         itemSO = GetComponent<ItemSO>();

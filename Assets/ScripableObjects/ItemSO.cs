@@ -9,5 +9,5 @@ public class ItemSO : ScriptableObject
     public int price;
     public int attack;
     public int defense;
-    public int speed;
+    public float speed;
 }

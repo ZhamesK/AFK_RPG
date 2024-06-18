@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public enum StatsChangeType
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Add,
+    Multiple,
+    Override
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[System.Serializable]
+public class PlayerStat
+{
+    public StatsChangeType statsChangeType;
+    [Range(0, 100)] public int maxHealth;
+    [Range(0f, 20f)] public float speed;
+    public ItemSO itemSO;
 }
